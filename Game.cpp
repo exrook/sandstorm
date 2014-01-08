@@ -9,7 +9,7 @@ Game::Game(int argc, char** argv) {
 int Game::run() {
   while (Running) {
     SDL_Event e;
-    if (SDL_PollEvent(&e)) {
+    while (SDL_PollEvent(&e)) {
       if (EventH == 0) {
         if (e.type == SDL_QUIT) {
           Running = false;;

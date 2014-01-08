@@ -1,7 +1,7 @@
-CXXFLAGS = -g -std=gnu++0x $(shell pkg-config --cflags sdl2 SDL2_image)
+CXXFLAGS = -g -std=gnu++0x $(shell pkg-config --cflags sdl2 SDL2_image) -Wall -pedantic
 LDFLAGS =  -g $(shell pkg-config --libs sdl2 SDL2_image)
 
-SOURCES = main.cpp util.cpp Game.cpp Sandstorm.cpp Entity.cpp
+SOURCES = main.cpp util.cpp Game.cpp Sandstorm.cpp Entity.cpp Platforms.cpp
 OBJECTS = $(SOURCES:.cpp=.o)
 EXECUTABLE = sandstorm
 
